@@ -75,7 +75,7 @@
       isText = maybeCode = true;
       for (i = _i = 0, _len = lines.length; _i < _len; i = ++_i) {
         line = lines[i];
-        lines[i] = maybeCode && (match = /^([-]{4}|[+]{4})/.exec(line)) ? (isText = false, line) : (maybeCode = /^\s*$/.test(line)) ? isText ? lang.symbol : '' : (isText = true, lang.symbol + ' ' + line);
+        lines[i] = maybeCode && (match = /^([ ]{4}|[ ]{0,3}\t)/.exec(line)) ? (isText = false, line.slice(match[0].length)) : (maybeCode = /^\s*$/.test(line)) ? isText ? lang.symbol : '' : (isText = true, lang.symbol + ' ' + line);
       }
     }
     for (_j = 0, _len1 = lines.length; _j < _len1; _j++) {
@@ -90,12 +90,8 @@
         }
       } else {
         hasCode = true;
-        if (/^([-]{4})/.test(line)) {
-          badCodeText += line.slice(4) + '\n';
-        }
-        if (/^([+]{4})/.test(line)) {
-          goodCodeText += line.slice(4) + '\n';
-        }
+        badCodeText += line + '\n';
+        goodCodeText += line + '\n';
       }
     }
     save();

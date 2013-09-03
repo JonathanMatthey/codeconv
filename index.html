@@ -2,381 +2,356 @@
 
 <html>
 <head>
-  <title>Docco</title>
+  <title>AirBnB CodeConv</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" media="all" href="public/stylesheets/normalize.css" />
-  <link rel="stylesheet" media="all" href="resources/linear/docco.css" />
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="resources/codeconv/docco.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="page">
+  <div id="container">
+    <div id="background"></div>
+    
+    <ul class="sections">
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h1">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <h1>AirBnB CodeConv</h1>
 
-      <div class="header">
+            </div>
+            
+        </li>
         
-          
-          <h1>Docco</h1>
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>Airbnb JavaScript Style Guide</p>
+<p>A mostly reasonable approach to JavaScript</p>
+<h2>Types</h2>
 
-          
+            </div>
+            
+        </li>
         
-
         
-      </div>
-
-      
-        
-        <p><strong>Docco</strong> is a quick-and-dirty documentation generator, written in
-<a href="http://coffeescript.org/#literate">Literate CoffeeScript</a>.
-It produces an HTML document that displays your comments intermingled with your
-code. All prose is passed through
-<a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a>, and code is
-passed through <a href="http://highlightjs.org/">Highlight.js</a> syntax highlighting.
-This page is the result of running Docco against its own
-<a href="https://github.com/jashkenas/docco/blob/master/docco.litcoffee">source file</a>.</p>
-<ol>
-<li><p>Install Docco with <strong>npm</strong>: <code>sudo npm install -g docco</code></p>
-</li>
-<li><p>Run it against your code: <code>docco src/*.coffee</code></p>
-</li>
-</ol>
-<p>There is no &quot;Step 3&quot;. This will generate an HTML page for each of the named
-source files, with a menu linking to the other pages, saving the whole mess
-into a <code>docs</code> folder (configurable).</p>
-<p>The <a href="http://github.com/jashkenas/docco">Docco source</a> is available on GitHub,
-and is released under the <a href="http://opensource.org/licenses/MIT">MIT license</a>.</p>
-<p>Docco can be used to process code written in any programming language. If it
-doesn&#39;t handle your favorite yet, feel free to
-<a href="https://github.com/jashkenas/docco/blob/master/resources/languages.json">add it to the list</a>.
-Finally, the <a href="http://coffeescript.org/#literate">&quot;literate&quot; style</a> of <em>any</em>
-language is also supported — just tack an <code>.md</code> extension on the end:
-<code>.coffee.md</code>, <code>.py.md</code>, and so on.</p>
-<h2>Partners in Crime:</h2>
-
-        
-      
-        
-        <ul>
-<li><p>If <strong>Node.js</strong> doesn&#39;t run on your platform, or you&#39;d prefer a more
-convenient package, get <a href="http://github.com/rtomayko">Ryan Tomayko</a>&#39;s
-<a href="http://rtomayko.github.com/rocco/rocco.html">Rocco</a>, the Ruby port that&#39;s
-available as a gem.</p>
-</li>
-<li><p>If you&#39;re writing shell scripts, try
-<a href="http://rtomayko.github.com/shocco/">Shocco</a>, a port for the <strong>POSIX shell</strong>,
-also by Mr. Tomayko.</p>
-</li>
-<li><p>If <strong>Python</strong> is more your speed, take a look at
-<a href="http://github.com/fitzgen">Nick Fitzgerald</a>&#39;s <a href="http://fitzgen.github.com/pycco/">Pycco</a>.</p>
-</li>
-<li><p>For <strong>Clojure</strong> fans, <a href="http://blog.fogus.me/">Fogus</a>&#39;s
-<a href="http://fogus.me/fun/marginalia/">Marginalia</a> is a bit of a departure from
-&quot;quick-and-dirty&quot;, but it&#39;ll get the job done.</p>
-</li>
-<li><p>There&#39;s a <strong>Go</strong> port called <a href="http://nikhilm.github.com/gocco/">Gocco</a>,
-written by <a href="https://github.com/nikhilm">Nikhil Marathe</a>.</p>
-</li>
-<li><p>Your all you <strong>PHP</strong> buffs out there, Fredi Bach&#39;s
-<a href="http://jquery-jkit.com/sourcemakeup/">sourceMakeup</a> (we&#39;ll let the faux pas
-with respect to our naming scheme slide), should do the trick nicely.</p>
-</li>
-<li><p><strong>Lua</strong> enthusiasts can get their fix with
-<a href="https://github.com/rgieseke">Robert Gieseke</a>&#39;s <a href="http://rgieseke.github.com/locco/">Locco</a>.</p>
-</li>
-<li><p>And if you happen to be a <strong>.NET</strong>
-aficionado, check out <a href="https://github.com/dontangg">Don Wilson</a>&#39;s
-<a href="http://dontangg.github.com/nocco/">Nocco</a>.</p>
-</li>
-<li><p>Going further afield from the quick-and-dirty, <a href="http://nevir.github.com/groc/">Groc</a>
-is a <strong>CoffeeScript</strong> fork of Docco that adds a searchable table of contents,
-and aims to gracefully handle large projects with complex hierarchies of code.</p>
-</li>
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>  <strong>Primitives</strong>: When you access a primitive type you work directly on its value</p>
+<ul>
+<li><code>string</code></li>
+<li><code>number</code></li>
+<li><code>boolean</code></li>
+<li><code>null</code></li>
+<li><code>undefined</code></li>
 </ul>
-<p>Note that not all ports will support all Docco features ... yet.</p>
-<h2>Main Documentation Generation Functions</h2>
 
-        
-      
-        
-        <p>Generate the documentation for our configured source file by copying over static
-assets, reading all the source files in, splitting them up into prose+code
-sections, highlighting each file in the appropriate language, and printing them
-out in an HTML template.</p>
+            </div>
+            
+            <div class="content"><div class='highlight badcode'><pre></pre></div><div class='highlight goodcode'><pre>  <span class="keyword">var</span> foo = <span class="number">1</span>,
+      bar = foo;
 
-        
-          <div class='highlight'><pre><span class="function"><span class="title">document</span></span> = (options = {}, callback) -&gt;
-  configure options
+  bar = <span class="number">9</span>;
 
-  fs.mkdirs config.output, -&gt;
+  console.log(foo, bar); <span class="comment">// =&gt; 1, 9</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>  <strong>Complex</strong>: When you access a complex type you work on a reference to its value</p>
+<ul>
+<li><code>object</code></li>
+<li><code>array</code></li>
+<li><code>function</code></li>
+</ul>
 
-    callback <span class="function"><span class="title">or</span></span>= (error) -&gt; <span class="keyword">throw</span> error <span class="keyword">if</span> error
-    <span class="function"><span class="title">copyAsset</span></span>  = (file, callback) -&gt;
-      fs.copy file, path.join(config.output, path.basename(file)), callback
-    <span class="function"><span class="title">complete</span></span>   = -&gt;
-      copyAsset config.css, (error) -&gt;
-        <span class="keyword">if</span> error <span class="keyword">then</span> callback error
-        <span class="keyword">else</span> <span class="keyword">if</span> fs.existsSync config.public <span class="keyword">then</span> copyAsset config.public, callback
-        <span class="keyword">else</span> callback()
+            </div>
+            
+            <div class="content"><div class='highlight badcode'><pre></pre></div><div class='highlight goodcode'><pre> <span class="keyword">var</span> foo = [<span class="number">1</span>, <span class="number">2</span>],
+ bar = foo;
 
-    files = config.sources.slice()
+ bar[<span class="number">0</span>] = <span class="number">9</span>;
 
-    <span class="function"><span class="title">nextFile</span></span> = -&gt;
-      source = files.shift()
-      fs.readFile source, (error, buffer) -&gt;
-        <span class="keyword">return</span> callback error <span class="keyword">if</span> error
+ console.log(foo[<span class="number">0</span>], bar[<span class="number">0</span>]); <span class="comment">// =&gt; 9, 9</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <h2>Objects</h2>
 
-        code = buffer.toString()
-        sections = parse source, code
-        format source, sections
-        write source, sections
-        <span class="keyword">if</span> files.length <span class="keyword">then</span> nextFile() <span class="keyword">else</span> complete()
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>  Use the literal syntax for object creation.</p>
 
-    nextFile()</pre></div>
+            </div>
+            
+            <div class="content"><div class='highlight badcode'><pre> <span class="keyword">var</span> item = <span class="keyword">new</span> Object();</pre></div><div class='highlight goodcode'><pre> <span class="keyword">var</span> item = {};</pre></div></div>
+            
+        </li>
         
-      
         
-        <p>Given a string of source code, <strong>parse</strong> out each block of prose and the code that
-follows it — by detecting which is which, line by line — and then create an
-individual <strong>section</strong> for it. Each section is an object with <code>docsText</code> and
-<code>codeText</code> properties, and eventually <code>docsHtml</code> and <code>codeHtml</code> as well.</p>
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>  Don&#39;t use <a href="http://es5.github.io/#x7.6.1">reserved words</a> as keys. It won&#39;t work in IE8. <a href="https://github.com/airbnb/javascript/issues/61">More info</a></p>
 
+            </div>
+            
+            <div class="content"><div class='highlight badcode'><pre> <span class="keyword">var</span> superman = {
+   <span class="keyword">default</span>: { clark: <span class="string">'kent'</span> },
+   private: <span class="literal">true</span>
+ };</pre></div><div class='highlight goodcode'><pre> <span class="keyword">var</span> superman = {
+   defaults: { clark: <span class="string">'kent'</span> },
+   hidden: <span class="literal">true</span>
+ };</pre></div></div>
+            
+        </li>
         
-          <div class='highlight'><pre><span class="function"><span class="title">parse</span></span> = (source, code) -&gt;
-  lines    = code.split <span class="string">'\n'</span>
-  sections = []
-  lang     = getLanguage source
-  hasCode  = docsText = codeText = <span class="string">''</span>
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>  Use readable synonyms in place of reserved words.</p>
 
-  <span class="function"><span class="title">save</span></span> = -&gt;
-    sections.push {docsText, codeText}
-    hasCode = docsText = codeText = <span class="string">''</span></pre></div>
+            </div>
+            
+            <div class="content"><div class='highlight badcode'><pre> <span class="keyword">var</span> superman = {
+   class: <span class="string">'alien'</span>
+ };
+ <span class="keyword">var</span> superman = {
+   klass: <span class="string">'alien'</span>
+ };</pre></div><div class='highlight goodcode'><pre> <span class="keyword">var</span> superman = {
+  type: <span class="string">'alien'</span>
+ };</pre></div></div>
+            
+        </li>
         
-      
         
-        <p>Our quick-and-dirty implementation of the literate programming style. Simply
-invert the prose and code relationship on a per-line basis, and then continue as
-normal below.</p>
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <h2>Arrays</h2>
 
+            </div>
+            
+        </li>
         
-          <div class='highlight'><pre>  <span class="keyword">if</span> lang.literate
-    <span class="keyword">for</span> line, i <span class="keyword">in</span> lines
-      lines[i] = <span class="keyword">if</span> <span class="regexp">/^\s*$/</span>.test line
-        <span class="string">''</span>
-      <span class="keyword">else</span> <span class="keyword">if</span> match = (<span class="regexp">/^([ ]{4}|\t)/</span>).exec line
-        line[match[<span class="number">0</span>].length..]
-      <span class="keyword">else</span>
-        lang.symbol + <span class="string">' '</span> + line
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>  Use the literal syntax for array creation</p>
 
-  <span class="keyword">for</span> line <span class="keyword">in</span> lines
-    <span class="keyword">if</span> (<span class="keyword">not</span> line <span class="keyword">and</span> prev <span class="keyword">is</span> <span class="string">'text'</span>) <span class="keyword">or</span>
-        (line.match(lang.commentMatcher) <span class="keyword">and</span> <span class="keyword">not</span> line.match(lang.commentFilter))
-      save() <span class="keyword">if</span> hasCode
-      docsText += (line = line.replace(lang.commentMatcher, <span class="string">''</span>)) + <span class="string">'\n'</span>
-      save() <span class="keyword">if</span> <span class="regexp">/^(---+|===+)$/</span>.test line
-      prev = <span class="string">'text'</span>
-    <span class="keyword">else</span>
-      hasCode = <span class="literal">yes</span>
-      codeText += line + <span class="string">'\n'</span>
-      prev = <span class="string">'code'</span>
-  save()
+            </div>
+            
+            <div class="content"><div class='highlight badcode'><pre> <span class="keyword">var</span> items = <span class="keyword">new</span> Array();</pre></div><div class='highlight goodcode'><pre> <span class="keyword">var</span> items = [];</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>  If you don&#39;t know array length use Array#push.</p>
+<pre><code><span class="keyword">var</span> someStack = [];</code></pre>
 
-  sections</pre></div>
+            </div>
+            
+            <div class="content"><div class='highlight badcode'><pre> someStack[someStack.length] = <span class="string">'abracadabra'</span>;</pre></div><div class='highlight goodcode'><pre> someStack.push(<span class="string">'abracadabra'</span>);</pre></div></div>
+            
+        </li>
         
-      
         
-        <p>To <strong>format</strong> and highlight the now-parsed sections of code, we use <strong>Highlight.js</strong>
-over stdio, and run the text of their corresponding comments through
-<strong>Markdown</strong>, using <a href="https://github.com/chjj/marked">Marked</a>.</p>
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>  When you need to copy an array use Array#slice. <a href="http://jsperf.com/converting-arguments-to-an-array/7">jsPerf</a></p>
+<pre><code><span class="keyword">var</span> len = items.length,
+    itemsCopy = [],
+    i;</code></pre>
 
+            </div>
+            
+            <div class="content"><div class='highlight badcode'><pre> <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; len; i++) {
+   itemsCopy[i] = items[i];
+ }</pre></div><div class='highlight goodcode'><pre> itemsCopy = items.slice();</pre></div></div>
+            
+        </li>
         
-          <div class='highlight'><pre><span class="function"><span class="title">format</span></span> = (source, sections) -&gt;
-  language = getLanguage source
-  <span class="keyword">for</span> section, i <span class="keyword">in</span> sections
-    code = highlight(language.name, section.codeText).value
-    code = code.replace(<span class="regexp">/\s+$/</span>, <span class="string">''</span>)
-    section.codeHtml = <span class="string">"&lt;div class='highlight'&gt;&lt;pre&gt;<span class="subst">#{code}</span>&lt;/pre&gt;&lt;/div&gt;"</span>
-    section.docsHtml = marked(section.docsText)</pre></div>
         
-      
-        
-        <p>Once all of the code has finished highlighting, we can <strong>write</strong> the resulting
-documentation file by passing the completed HTML sections into the template,
-and rendering it to the specified output path.</p>
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>  To convert an array-like object to an array, use Array#slice.</p>
 
+            </div>
+            
+            <div class="content"><div class='highlight badcode'><pre></pre></div><div class='highlight goodcode'><pre> <span class="function"><span class="keyword">function</span> <span class="title">trigger</span><span class="params">()</span> {</span>
+   <span class="keyword">var</span> args = Array.prototype.slice.call(arguments);
+   ...
+ }</pre></div></div>
+            
+        </li>
         
-          <div class='highlight'><pre><span class="function"><span class="title">write</span></span> = (source, sections) -&gt;
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <h2>Strings</h2>
 
-  <span class="function"><span class="title">destination</span></span> = (file) -&gt;
-    path.join(config.output, path.basename(file, path.extname(file)) + <span class="string">'.html'</span>)</pre></div>
+            </div>
+            
+        </li>
         
-      
         
-        <p>The <strong>title</strong> of the file is either the first heading in the prose, or the
-name of the source file.</p>
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
+              </div>
+              <p>  Use single quotes <code>&#39;&#39;</code> for strings</p>
 
+            </div>
+            
+            <div class="content"><div class='highlight badcode'><pre> <span class="keyword">var</span> name = <span class="string">"Bob Parr"</span>;
+ <span class="keyword">var</span> fullName = <span class="string">"Bob "</span> + <span class="keyword">this</span>.lastName;</pre></div><div class='highlight goodcode'><pre> <span class="keyword">var</span> name = <span class="string">'Bob Parr'</span>;
+ <span class="keyword">var</span> fullName = <span class="string">'Bob '</span> + <span class="keyword">this</span>.lastName;</pre></div></div>
+            
+        </li>
         
-          <div class='highlight'><pre>  first = marked.lexer(sections[<span class="number">0</span>].docsText)[<span class="number">0</span>]
-  hasTitle = first <span class="keyword">and</span> first.type <span class="keyword">is</span> <span class="string">'heading'</span> <span class="keyword">and</span> first.depth <span class="keyword">is</span> <span class="number">1</span>
-  title = <span class="keyword">if</span> hasTitle <span class="keyword">then</span> first.text <span class="keyword">else</span> path.basename source
+        
+        <li id="section-16">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <p>  Strings longer than 80 characters should be written across multiple lines using string concatenation.</p>
+<p>  Note: If overused, long strings with concatenation could impact performance. <a href="http://jsperf.com/ya-string-concat">jsPerf</a> &amp; <a href="https://github.com/airbnb/javascript/issues/40">Discussion</a></p>
 
-  html = config.template {sources: config.sources, css: path.basename(config.css),
-    title, hasTitle, sections, path, destination,}
+            </div>
+            
+            <div class="content"><div class='highlight badcode'><pre> <span class="keyword">var</span> errorMessage = <span class="string">'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.'</span>;
+ <span class="keyword">var</span> errorMessage = <span class="string">'This is a super long error that \
+ was thrown because of Batman. \
+ When you stop to think about \
+ how Batman had anything to do \
+ with this, you would get nowhere \
+ fast.'</span>;</pre></div><div class='highlight goodcode'><pre> <span class="keyword">var</span> errorMessage = <span class="string">'This is a super long error that '</span> +
+  <span class="string">'was thrown because of Batman.'</span> +
+  <span class="string">'When you stop to think about '</span> +
+  <span class="string">'how Batman had anything to do '</span> +
+  <span class="string">'with this, you would get nowhere '</span> +
+  <span class="string">'fast.'</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
+              </div>
+              <p>  When programatically building up a string, use Array#join instead of string concatenation. Mostly for IE: <a href="http://jsperf.com/string-vs-array-concat/2">jsPerf</a>.</p>
+<pre><code><span class="keyword">var</span> items,
+    messages,
+    length, i;
 
-  console.log <span class="string">"docco: <span class="subst">#{source}</span> -&gt; <span class="subst">#{destination source}</span>"</span>
-  fs.writeFileSync destination(source), html</pre></div>
-        
-      
-        
-        <h2>Configuration</h2>
+messages = [{
+    state: <span class="string">'success'</span>,
+    message: <span class="string">'This one worked.'</span>
+},{
+    state: <span class="string">'success'</span>,
+    message: <span class="string">'This one worked as well.'</span>
+},{
+    state: <span class="string">'error'</span>,
+    message: <span class="string">'This one did not work.'</span>
+}];
 
-        
-      
-        
-        <p>Default configuration <strong>options</strong>. All of these may be overriden by command-line
-options.</p>
+length = messages.length;</code></pre>
 
-        
-          <div class='highlight'><pre>config =
-  layout:     <span class="string">'parallel'</span>
-  output:     <span class="string">'docs'</span>
-  template:   <span class="literal">null</span>
-  css:        <span class="literal">null</span>
-  extension:  <span class="literal">null</span></pre></div>
-        
-      
-        
-        <p><strong>Configure</strong> this particular run of Docco. We might use a passed-in external
-template, or one of the built-in <strong>layouts</strong>. We only attempt to process
-source files for languages for which we have definitions.</p>
+            </div>
+            
+            <div class="content"><div class='highlight badcode'><pre> <span class="function"><span class="keyword">function</span> <span class="title">inbox</span><span class="params">(messages)</span> {</span>
+   items = <span class="string">'&lt;ul&gt;'</span>;
 
-        
-          <div class='highlight'><pre><span class="function"><span class="title">configure</span></span> = (options) -&gt;
-  _.extend config, _.pick(options, _.keys(config)...)
+   <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; length; i++) {
+     items += <span class="string">'&lt;li&gt;'</span> + messages[i].message + <span class="string">'&lt;/li&gt;'</span>;
+   }
 
-  <span class="keyword">if</span> options.template
-    config.layout = <span class="literal">null</span>
-  <span class="keyword">else</span>
-    dir = config.layout = path.join __dirname, <span class="string">'resources'</span>, config.layout
-    config.public       = path.join dir, <span class="string">'public'</span> <span class="keyword">if</span> fs.existsSync path.join dir, <span class="string">'public'</span>
-    config.template     = path.join dir, <span class="string">'docco.jst'</span>
-    config.css          = options.css <span class="keyword">or</span> path.join dir, <span class="string">'resources/linear/docco.css'</span>
-  config.template = _.template fs.readFileSync(config.template).toString()
+   <span class="keyword">return</span> items + <span class="string">'&lt;/ul&gt;'</span>;
+ }</pre></div><div class='highlight goodcode'><pre> <span class="function"><span class="keyword">function</span> <span class="title">inbox</span><span class="params">(messages)</span> {</span>
+   items = [];
 
-  config.sources = options.args.filter((source) -&gt;
-    lang = getLanguage source, config
-    console.warn <span class="string">"docco: skipped unknown type (<span class="subst">#{path.basename source}</span>)"</span> <span class="keyword">unless</span> lang
-    lang
-  ).sort()</pre></div>
-        
-      
-        
-        <h2>Helpers &amp; Initial Setup</h2>
+   <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; length; i++) {
+     items[i] = messages[i].message;
+   }
 
+   <span class="keyword">return</span> <span class="string">'&lt;ul&gt;&lt;li&gt;'</span> + items.join(<span class="string">'&lt;/li&gt;&lt;li&gt;'</span>) + <span class="string">'&lt;/li&gt;&lt;/ul&gt;'</span>;
+ }</pre></div></div>
+            
+        </li>
         
-      
-        
-        <p>Require our external dependencies.</p>
-
-        
-          <div class='highlight'><pre>_           = require <span class="string">'underscore'</span>
-fs          = require <span class="string">'fs-extra'</span>
-path        = require <span class="string">'path'</span>
-marked      = require <span class="string">'marked'</span>
-commander   = require <span class="string">'commander'</span>
-{highlight} = require <span class="string">'highlight.js'</span></pre></div>
-        
-      
-        
-        <p>Languages are stored in JSON in the file <code>resources/languages.json</code>.
-Each item maps the file extension to the name of the language and the
-<code>symbol</code> that indicates a line comment. To add support for a new programming
-language to Docco, just add it to the file.</p>
-
-        
-          <div class='highlight'><pre>languages = JSON.parse fs.readFileSync(path.join(__dirname, <span class="string">'resources'</span>, <span class="string">'languages.json'</span>))</pre></div>
-        
-      
-        
-        <p>Build out the appropriate matchers and delimiters for each language.</p>
-
-        
-          <div class='highlight'><pre><span class="keyword">for</span> ext, l <span class="keyword">of</span> languages</pre></div>
-        
-      
-        
-        <p>Does the line begin with a comment?</p>
-
-        
-          <div class='highlight'><pre>  l.commentMatcher = <span class="regexp">///^\s*<span class="comment">#{l.symbol}\s?///</span></pre></div>
-        
-      
-        
-        <p>Ignore <a href="http://en.wikipedia.org/wiki/Shebang_(Unix\">hashbangs</a>) and interpolations...</p>
-
-        
-          <div class='highlight'><pre>  l.commentFilter = <span class="regexp">/(^#![/]|^\s*#\{)/</span></pre></div>
-        
-      
-        
-        <p>A function to get the current language we&#39;re documenting, based on the
-file extension. Detect and tag &quot;literate&quot; <code>.ext.md</code> variants.</p>
-
-        
-          <div class='highlight'><pre><span class="function"><span class="title">getLanguage</span></span> = (source) -&gt;
-  ext  = config.extension <span class="keyword">or</span> path.extname(source) <span class="keyword">or</span> path.basename(source)
-  lang = languages[ext]
-  <span class="keyword">if</span> lang <span class="keyword">and</span> lang.name <span class="keyword">is</span> <span class="string">'markdown'</span>
-    codeExt = path.extname(path.basename(source, ext))
-    <span class="keyword">if</span> codeExt <span class="keyword">and</span> codeLang = languages[codeExt]
-      lang = _.extend {}, codeLang, {literate: <span class="literal">yes</span>}
-  lang</pre></div>
-        
-      
-        
-        <p>Keep it DRY. Extract the docco <strong>version</strong> from <code>package.json</code></p>
-
-        
-          <div class='highlight'><pre>version = JSON.parse(fs.readFileSync(path.join(__dirname, <span class="string">'package.json'</span>))).version</pre></div>
-        
-      
-        
-        <h2>Command Line Interface</h2>
-
-        
-      
-        
-        <p>Finally, let&#39;s define the interface to run Docco from the command line.
-Parse options using <a href="https://github.com/visionmedia/commander.js">Commander</a>.</p>
-
-        
-          <div class='highlight'><pre><span class="function"><span class="title">run</span></span> = (args = process.argv) -&gt;
-  c = config
-  commander.version(version)
-    .usage(<span class="string">'[options] files'</span>)
-    .option(<span class="string">'-l, --layout [name]'</span>,    <span class="string">'choose a layout (parallel, linear or classic)'</span>, c.layout)
-    .option(<span class="string">'-o, --output [path]'</span>,    <span class="string">'output to a given folder'</span>, c.output)
-    .option(<span class="string">'-c, --css [file]'</span>,       <span class="string">'use a custom css file'</span>, c.css)
-    .option(<span class="string">'-t, --template [file]'</span>,  <span class="string">'use a custom .jst template'</span>, c.template)
-    .option(<span class="string">'-e, --extension [ext]'</span>,  <span class="string">'assume a file extension for all inputs'</span>, c.extension)
-    .parse(args)
-    .name = <span class="string">"docco"</span>
-  <span class="keyword">if</span> commander.args.length
-    document commander
-  <span class="keyword">else</span>
-    console.log commander.helpInformation()</pre></div>
-        
-      
-        
-        <h2>Public API</h2>
-
-        
-      
-        
-        
-        
-          <div class='highlight'><pre>Docco = module.exports = {run, document, parse, version}</pre></div>
-        
-      
-      <div class="fleur">h</div>
-    </div>
+    </ul>
   </div>
 </body>
 </html>

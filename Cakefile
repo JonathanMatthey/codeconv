@@ -24,13 +24,18 @@ task 'install', 'install the `docco` command into /usr/local (or --prefix)', (op
 
 task 'doc', 'rebuild the Docco documentation', (options) ->
   layout = options.layout or 'linear'
-  exec([
+  # exec([
+  #   "bin/docco --layout #{layout} docco.litcoffee"
+  #   "sed \"s/docco.css/resources\\/#{layout}\\/docco.css/\" < docs/docco.html > index.html"
+  #   'rm -r docs'
+  # ].join(' && '), (err) ->
+  #   throw err if err
+  # )
+  console.log [
     "bin/docco --layout #{layout} docco.litcoffee"
     "sed \"s/docco.css/resources\\/#{layout}\\/docco.css/\" < docs/docco.html > index.html"
     'rm -r docs'
-  ].join(' && '), (err) ->
-    throw err if err
-  )
+  ].join(' && ')
 
 task 'loc', 'count the lines of code in Docco', ->
   code = fs.readFileSync('docco.litcoffee').toString()

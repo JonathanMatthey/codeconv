@@ -1,3 +1,14 @@
+CodeConv
+=====
+
+**CodeConv** is a code convention documentation generator, written in
+[Literate CoffeeScript](http://coffeescript.org/#literate).
+It extends docco with specific code convention features.
+
+function isthisCode() = { return "?"}
+    
+++++ function isthisCode() = { return "?"}
+
 Docco
 =====
 
@@ -115,11 +126,11 @@ individual **section** for it. Each section is an object with `docsText` and
       lines    = code.split '\n'
       sections = []
       lang     = getLanguage source, config
-      hasCode  = docsText = codeText = ''
+      hasCode = docsText = badCodeText = goodCodeText = ''
 
       save = ->
-        sections.push {docsText, codeText}
-        hasCode = docsText = codeText = ''
+        sections.push {docsText, badCodeText, goodCodeText}
+        hasCode = docsText = badCodeText = goodCodeText = ''
 
 Our quick-and-dirty implementation of the literate programming style. Simply
 invert the prose and code relationship on a per-line basis, and then continue as
@@ -128,9 +139,9 @@ normal below.
       if lang.literate
         isText = maybeCode = yes
         for line, i in lines
-          lines[i] = if maybeCode and match = /^([ ]{4}|[ ]{0,3}\t)/.exec line
+          lines[i] = if maybeCode and match = /^([-]{4}|[+]{4})/.exec line
             isText = no
-            line[match[0].length..]
+            line
           else if maybeCode = /^\s*$/.test line
             if isText then lang.symbol else ''
           else
@@ -144,7 +155,8 @@ normal below.
           save() if /^(---+|===+)$/.test line
         else
           hasCode = yes
-          codeText += line + '\n'
+          badCodeText += line[4..] + '\n' if /^([-]{4})/.test line
+          goodCodeText += line[4..] + '\n' if /^([+]{4})/.test line
       save()
 
       sections
@@ -172,9 +184,12 @@ if not specified.
       }
 
       for section, i in sections
-        code = highlightjs.highlight(language.name, section.codeText).value
-        code = code.replace(/\s+$/, '')
-        section.codeHtml = "<div class='highlight'><pre>#{code}</pre></div>"
+        badcode = highlightjs.highlight(language.name, section.badCodeText).value
+        goodcode = highlightjs.highlight(language.name, section.goodCodeText).value
+        badcode = badcode.replace(/\s+$/, '')
+        goodcode = goodcode.replace(/\s+$/, '')
+        section.codeHtml = "<div class='highlight badcode'><pre>#{badcode}</pre></div>" +
+                          "<div class='highlight goodcode'><pre>#{goodcode}</pre></div>"
         section.docsHtml = marked(section.docsText)
 
 Once all of the code has finished highlighting, we can **write** the resulting
