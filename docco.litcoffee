@@ -126,11 +126,13 @@ individual **section** for it. Each section is an object with `docsText` and
       lines    = code.split '\n'
       sections = []
       lang     = getLanguage source, config
-      hasCode = docsText = badCodeText = goodCodeText = ''
+      hasCode = docsText = codeText = codeType = prevLineCodeType = ''
+      codeBlocks = []
 
       save = ->
-        sections.push {docsText, badCodeText, goodCodeText}
-        hasCode = docsText = badCodeText = goodCodeText = ''
+        sections.push {docsText, codeBlocks}
+        hasCode = docsText = codeText = ''
+        codeBlocks = []
 
 Our quick-and-dirty implementation of the literate programming style. Simply
 invert the prose and code relationship on a per-line basis, and then continue as
@@ -139,7 +141,7 @@ normal below.
       if lang.literate
         isText = maybeCode = yes
         for line, i in lines
-          lines[i] = if maybeCode and match = /^([-]{4}|[+]{4})/.exec line
+          lines[i] = if maybeCode and match = /^([-]{4}|[+]{4}|[ ]{4})/.exec line
             isText = no
             line
           else if maybeCode = /^\s*$/.test line
@@ -155,11 +157,32 @@ normal below.
           save() if /^(---+|===+)$/.test line
         else
           hasCode = yes
-          badCodeText += line[4..] + '\n' if /^([-]{4})/.test line
-          goodCodeText += line[4..] + '\n' if /^([+]{4})/.test line
+
+          prevLineCodeType = codeType
+          codeType = getCodeLineType line
+          
+          # empty prevLineCodeType means this is the first line
+          if !!prevLineCodeType && codeType != prevLineCodeType
+            # code type has switched, push that block out
+            codeBlocks.push { 'codeType': prevLineCodeType, 'codeText': codeText }
+            codeText = line[4..] + '\n'
+          else
+            codeText += line[4..] + '\n'
+
       save()
 
       sections
+
+Get code line type, if it is prefixed with ---- it's bad code, ++++ is good code,
+and '    ' is normal code
+
+    getCodeLineType = (line) ->
+      if /^([-]{4})/.test line
+        'bad'
+      else if /^([+]{4})/.test line
+        'good'
+      else
+        'normal'
 
 To **format** and highlight the now-parsed sections of code, we use **Highlight.js**
 over stdio, and run the text of their corresponding comments through
@@ -167,6 +190,7 @@ over stdio, and run the text of their corresponding comments through
 
     format = (source, sections, config) ->
       language = getLanguage source, config
+      codeText = ''
 
 Tell Marked how to highlight code blocks within comments, treating that code
 as either the language specified in the code block or the language of the file
@@ -184,12 +208,11 @@ if not specified.
       }
 
       for section, i in sections
-        badcode = highlightjs.highlight(language.name, section.badCodeText).value
-        goodcode = highlightjs.highlight(language.name, section.goodCodeText).value
-        badcode = badcode.replace(/\s+$/, '')
-        goodcode = goodcode.replace(/\s+$/, '')
-        section.codeHtml = "<div class='highlight badcode'><pre>#{badcode}</pre></div>" +
-                          "<div class='highlight goodcode'><pre>#{goodcode}</pre></div>"
+        section.codeHtml = ''
+        for codeBlock, j in section.codeBlocks
+          codeText = highlightjs.highlight(language.name, codeBlock.codeText).value
+          codeText = codeText.replace(/\s+$/, '')
+          section.codeHtml += "<div class='highlight #{codeBlock.codeType}'><pre>#{codeText}</pre></div>"
         section.docsHtml = marked(section.docsText)
 
 Once all of the code has finished highlighting, we can **write** the resulting

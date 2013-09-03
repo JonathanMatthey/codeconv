@@ -45,7 +45,7 @@
               </div>
               <%= section.docsHtml %>
             </div>
-            <% if (section.badCodeText.replace(/\s/gm, '') != '' || section.goodCodeText.replace(/\s/gm, '') != '') { %>
+            <% if (section.codeBlocks.length > 0) { %>
             <div class="content"><%= section.codeHtml %></div>
             <% } %>
         </li>

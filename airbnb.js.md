@@ -1,4 +1,4 @@
-AirBnB CodeConv
+R29 CodeConv
 ===============
 
 Airbnb JavaScript Style Guide
@@ -23,6 +23,9 @@ Types
 ++++  bar = 9;
 ++++
 ++++  console.log(foo, bar); // => 1, 9
+----  var BADLINE_HERE
+      var NORMALLINE = 'BOOM!';
+++++  function BackToGood(){}
 
 
   **Complex**: When you access a complex type you work on a reference to its value
@@ -181,6 +184,18 @@ Strings
 ++++
 ++++   return '<ul><li>' + items.join('</li><li>') + '</li></ul>';
 ++++ }
+
+
+
+  Vertically align multiple variable denfitions
+
+---- var name = "asda"''
+---- var n = "asda"''
+---- var myname = "asda"''
+
+++++ var name   = "asda"''
+++++ var n      = "asda"''
+++++ var myname = "asda"''
 
 
 
