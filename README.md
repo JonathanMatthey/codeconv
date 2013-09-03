@@ -1,5 +1,9 @@
 While in Dev
 
+make sure you have coffee-script install
+
+    sudo npm install -g coffee-script
+
 clone and run
 
     npm install
